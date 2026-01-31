@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goudy French Cuisine | Artisan Charcuterie</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                        },
+                        secondary: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            200: '#a7f3d0',
+                            300: '#6ee7b7',
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans antialiased">
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+    <script src="product-card.js"></script>
+    <script src="newsletter.js"></script>
+
+    <custom-navbar></custom-navbar>
+
+    <!-- Hero Section -->
+    <section class="relative h-[85vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://104596667.cdn6.editmysite.com/uploads/1/0/4/5/104596667/AM7FJUNK42XSFAHFNKOL4NLG.jpeg?width=2400&optimize=medium" alt="Charcuterie spread" class="w-full h-full object-cover opacity-90">
+            <div class="absolute inset-0 bg-gradient-to-b from-stone-900/60 via-stone-900/40 to-stone-50"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <span class="inline-block py-1 px-3 rounded-full bg-primary-500/20 text-primary-100 text-sm font-medium mb-4 backdrop-blur-sm border border-primary-400/30">
+                Est. 2012 • Artisan Crafted
+            </span>
+            <h1 class="font-serif text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                Curated French Products <br/>
+                <span class="text-primary-300">for Every Occasion</span>
+            </h1>
+            <p class="text-lg md:text-xl text-stone-200 mb-8 max-w-2xl mx-auto font-light">
+                From intimate gatherings to grand celebrations, experience charcuterie elevated to an art form. Seasonal selections and year-round classics.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="seasonal.html" class="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white rounded-full font-medium transition-all transform hover:scale-105 shadow-lg hover:shadow-primary-500/25">
+                    <i data-feather="calendar" class="w-5 h-5 mr-2"></i>
+                    Seasonal Collection
+                </a>
+                <a href="year-round.html" class="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/30 rounded-full font-medium transition-all backdrop-blur-sm">
+                    <i data-feather="shopping-bag" class="w-5 h-5 mr-2"></i>
+                    Shop Classics
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Seasonal -->
+    <section class="py-20 px-4 md:px-8 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+            <div>
+                <h2 class="font-serif text-4xl font-bold text-stone-900 mb-2">Seasonal Favorites</h2>
+                <p class="text-stone-600">Limited time offerings, available for pre-order</p>
+            </div>
+            <a href="seasonal.html" class="mt-4 md:mt-0 text-primary-700 font-medium hover:text-primary-800 flex items-center group">
+                View All Seasonal 
+                <i data-feather="arrow-right" class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <custom-product-card 
+                name="The MICROFINANCE Special"
+                price="Priceless"
+                image="https://media.licdn.com/dms/image/v2/C5622AQGArRsYf17o5w/feedshare-shrink_800/feedshare-shrink_800/0/1598377840913?e=2147483647&v=beta&t=a62OT-okI7txgn-5GZo24hlyodSBaQqbVwoNv-CAdWM"
+                tag="Pre-order"
+                tag-color="bg-secondary-600"
+                description="Aged cheddar, fig jam, spiced nuts, and cured meats with autumn fruits">
+            </custom-product-card>
+
+            <custom-product-card 
+                name="Catalane Butifarra Sausage"
+                price="12"
+                image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeRDZOMKeIWkNWttaElb6YLphL2wtdQAiSUg&s"
+                tag="Pre-order"
+                tag-color="bg-secondary-600"
+                description="Free from coloring, preservatives and additives, this sausage are made with natural pork shoulder, pork fat, salt, garlic, cumin, pepper, nutmeg, and wine vinegar.">
+            </custom-product-card>
+
+            <custom-product-card 
+                name="Boerewors (South African Sausage)"
+                price="16"
+                image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHJvoHRmOOM169j9ViRXFNrLC2HqBmGUQs1g&s"
+                tag="Pre-order"
+                tag-color="bg-secondary-600"
+                description="Robust and flavorful South African Boerewors is the sausage you need for your next grilling party!">
+            </custom-product-card>
+        </div>
+    </section>
+
+    <!-- Year Round Teaser -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="font-serif text-4xl font-bold text-stone-900 mb-2">Year-Round Classics</h2>
+                    <p class="text-stone-600">Always available, always exceptional</p>
+                </div>
+                <a href="year-round.html" class="mt-4 md:mt-0 text-primary-700 font-medium hover:text-primary-800 flex items-center group">
+                    View All Classics
+                    <i data-feather="arrow-right" class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <custom-product-card 
+                    name="Toulouse Bacon sausage - bag of 1lbs"
+                    price="15"
+                    image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnJ0L9dx_xa3hosyVkepy2PsYeixnZtg6g0Q&s"
+                    description="Free from coloring, preservatives and additives, this sausages are made with natural pork meat, salt, pepper dry bacon and Fresh spring onion.">
+                </custom-product-card>
+
+                <custom-product-card 
+                    name="Chipolatas with Provence Herbs sausage - bag of approx 1lbs"
+                    price="15"
+                    image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdyfako0ey0nLZNJBDkCoW4K_rK76Ksb9FJA&s"
+                    description="Free from coloring, preservatives and additives, this Chipolata is made from natural coarse-ground pork seasoned with salt and pepper together with Provence herbs.">
+                </custom-product-card>
+
+                <custom-product-card 
+                    name="Duck sausage - 6 links per bag"
+                    price="14"
+                    image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMyyqLnQYdLNM4NjPXEiYeJQYVTeFJeUvgKg&s"
+                    description="Free from coloring, preservatives, and additives. Made with Duck breast, a touch of, salt and pepper.">
+                </custom-product-card>
+
+                <custom-product-card 
+                    name="Sausage Meat - 1 bag of 1lb"
+                    price="15"
+                    image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxQ78Clz5rHqjyKiuevVhSqRqRFSTWso7MDA&s"
+                    description="Free from coloring, preservatives and additives, this sausage made of all-natural grounded Pork shoulder or beef round, salt, pepper and garlic.">
+                </custom-product-card>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-20 px-4">
+        <custom-newsletter></custom-newsletter>
+    </section>
+
+    <!-- Feedback CTA -->
+    <section class="py-16 bg-stone-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <i data-feather="message-circle" class="w-12 h-12 text-primary-400 mx-auto mb-4"></i>
+            <h2 class="font-serif text-3xl font-bold mb-4">Help Us Serve You Better</h2>
+            <p class="text-stone-300 mb-8 max-w-xl mx-auto">
+                We're constantly improving our shipping and packaging. Share your experience and help us perfect every delivery.
+            </p>
+            <a href="feedback.html" class="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 rounded-full font-medium transition-colors">
+                Share Feedback
+                <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <custom-footer></custom-footer>
+
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+</html>
